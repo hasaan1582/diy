@@ -1,3 +1,4 @@
+import 'package:diy/ui/auth_screens/forget_password.dart';
 import 'package:diy/ui/common_widgets/gradient_button.dart';
 import 'package:diy/values/values.dart';
 import 'package:flutter/material.dart';
@@ -81,7 +82,7 @@ class ServiceLicensePage extends StatelessWidget {
                     style: TextStyle(
                         color: MyColors.blueText, fontWeight: FontWeight.w700),
                   ),
-                  onTap: () {},
+                  onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgetPassword()));},
                 ),
               ],
             ),

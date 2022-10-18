@@ -1,4 +1,6 @@
+import 'package:diy/ui/auth_screens/login.dart';
 import 'package:diy/ui/common_widgets/gradient_button.dart';
+import 'package:diy/ui/dashboard/dashboard.dart';
 import 'package:diy/values/values.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +36,7 @@ class Welcome4 extends StatelessWidget {
                       ),
                       child: Text(Strings.renovationIsATapAway)),
                   SizedBox(height: 16,),
-                  GradientButton(onTap: (){},childWidget: Text(Strings.getStarted),),
+                  GradientButton(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>DashBoard()));},childWidget: Text(Strings.getStarted),),
 
                 ],
               )
