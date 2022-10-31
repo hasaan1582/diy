@@ -8,6 +8,7 @@ class Styles{
  static TextStyle subTitle =TextStyle(fontSize: 14,color: Colors.grey);
  static TextStyle normalGrey =TextStyle(fontSize: 14,color: Colors.grey);
  static TextStyle buttonTextStyle =TextStyle(fontSize: 16,color: Colors.white,fontWeight: FontWeight.bold);
+ static TextStyle blueHeadingStyle =TextStyle(fontSize: 18,color: MyColors.blueText,fontWeight: FontWeight.w600);
 
   Styles._();
 }

@@ -1,3 +1,4 @@
+import 'package:diy/ui/auth_screens/service_license_page.dart';
 import 'package:diy/ui/common_widgets/circular_illustration_placeholder.dart';
 import 'package:diy/ui/common_widgets/gradient_button.dart';
 import 'package:diy/values/values.dart';
@@ -87,7 +88,7 @@ class _LoginState extends State<Login> {
                     style: TextStyle(
                         color: MyColors.blueText, fontWeight: FontWeight.w700),
                   ),
-                  onTap: () {},
+                  onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>ServiceLicensePage()));},
                 ),
                 SizedBox(height: 32,),
 

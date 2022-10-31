@@ -1,3 +1,4 @@
+import 'package:diy/ui/auth_screens/sign_up.dart';
 import 'package:diy/ui/common_widgets/circular_illustration_placeholder.dart';
 import 'package:diy/ui/common_widgets/gradient_button.dart';
 import 'package:diy/values/values.dart';
@@ -70,7 +71,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                     style: TextStyle(
                         color: MyColors.blueText, fontWeight: FontWeight.w700),
                   ),
-                  onTap: () {},
+                  onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>Signup()));},
                 ),
               ],
             ),

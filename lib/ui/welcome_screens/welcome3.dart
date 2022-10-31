@@ -1,4 +1,5 @@
 import 'package:diy/ui/common_widgets/gradient_button.dart';
+import 'package:diy/ui/welcome_screens/welcome4.dart';
 import 'package:diy/values/values.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +38,7 @@ class Welcome3 extends StatelessWidget {
                     height: 16,
                   ),
                   GradientButton(
-                    onTap: () {},
+                    onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>Welcome4()));},
                     childWidget: Text(Strings.getStarted),
                   ),
                 ],

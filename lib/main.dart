@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:ServiceLicensePage(),
+      home:Splash(colored: false,),
      // home:ForgetPassword(),
       //home:Login(),
       //home:Welcome4(),
