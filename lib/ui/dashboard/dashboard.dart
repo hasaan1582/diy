@@ -1,3 +1,4 @@
+import 'package:diy/ui/profile/profile.dart';
 import 'package:diy/values/values.dart';
 import 'package:flutter/material.dart';
 
@@ -191,58 +192,63 @@ class DashBoard extends StatelessWidget {
                 physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                   itemCount: 3,
-                  itemBuilder: (context, index) => Container(
-                    margin: EdgeInsets.all(12),
-                    padding: EdgeInsets.all(16),
-                    height: 135,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 5,
-                              ),
-                            ],
-                            borderRadius: BorderRadius.circular(10)),
-                     child: Row(
-                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                       children: [
-                         Column(
-                           mainAxisAlignment: MainAxisAlignment.center,
-                           crossAxisAlignment: CrossAxisAlignment.center,
-                           children: [
-                             CircleAvatar(backgroundColor: Colors.grey,radius: 40,)
-                           ],
-                         ),
-                         Column(
-                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                           children: [
-                             Column(
-                               children: [
-                                 Text("Morbius Stone flooring",style: Styles.normal.copyWith(color: MyColors.blueText),),
-                                SizedBox(height: 4,),
-                                 Row(children: [
-                                   Icon(Icons.star,size: 16,color: Colors.yellow,),
-                                   Icon(Icons.star,size: 16,color: Colors.yellow,),
-                                   Icon(Icons.star,size: 16,color: Colors.yellow,),
-                                   Icon(Icons.star,size: 16,color: Colors.yellow,),
-                                   Icon(Icons.star,size: 16,color: Colors.grey,),
-                                   Text("(3,433)", style: TextStyle(color: Colors.grey),)
-                                 ],),
-                               ],
-                             ),
-                             Row(
-                               children: [
-                                 Icon(Icons.phone,color: MyColors.blueText,),
-                                 Text("746 363 9129",style: Styles.blueHeadingStyle,),
-                               ],
-                             ),
-                           ],
-                         ),
-                       ],
-                     ),
-                      ),
+                  itemBuilder: (context, index) => GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Profile()),);
+                    },
+                    child: Container(
+                      margin: EdgeInsets.all(12),
+                      padding: EdgeInsets.all(16),
+                      height: 135,
+                          width: MediaQuery.of(context).size.width,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey,
+                                  blurRadius: 5,
+                                ),
+                              ],
+                              borderRadius: BorderRadius.circular(10)),
+                       child: Row(
+                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                         children: [
+                           Column(
+                             mainAxisAlignment: MainAxisAlignment.center,
+                             crossAxisAlignment: CrossAxisAlignment.center,
+                             children: [
+                               CircleAvatar(backgroundColor: Colors.grey,radius: 40,)
+                             ],
+                           ),
+                           Column(
+                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                             children: [
+                               Column(
+                                 children: [
+                                   Text("Morbius Stone flooring",style: Styles.normal.copyWith(color: MyColors.blueText),),
+                                  SizedBox(height: 4,),
+                                   Row(children: [
+                                     Icon(Icons.star,size: 16,color: Colors.yellow,),
+                                     Icon(Icons.star,size: 16,color: Colors.yellow,),
+                                     Icon(Icons.star,size: 16,color: Colors.yellow,),
+                                     Icon(Icons.star,size: 16,color: Colors.yellow,),
+                                     Icon(Icons.star,size: 16,color: Colors.grey,),
+                                     Text("(3,433)", style: TextStyle(color: Colors.grey),)
+                                   ],),
+                                 ],
+                               ),
+                               Row(
+                                 children: [
+                                   Icon(Icons.phone,color: MyColors.blueText,),
+                                   Text("746 363 9129",style: Styles.blueHeadingStyle,),
+                                 ],
+                               ),
+                             ],
+                           ),
+                         ],
+                       ),
+                        ),
+                  ),
               ),
             ]),
           ),
